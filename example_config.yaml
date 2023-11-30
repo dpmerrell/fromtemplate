@@ -1,0 +1,15 @@
+# Add a file like this to the hidden config directory:
+# $HOME/.script_templates/config.yaml
+
+# Key = template field string; value = substitution
+fields:
+    __USER_NAME__: "YOUR NAME"
+    __USER_EMAIL__: "your@email.com"
+    # OTHER FIELDS...
+
+# Key = file suffix; value = path to template
+templates: 
+    #py: "~/MY_TEMPLATES/template.py"
+    #sh: "~/MY_TEMPLATES/template.sh"
+
+

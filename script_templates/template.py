@@ -1,6 +1,7 @@
 """
     __SCRIPT_NAME__
-    David Merrell (c) __SCRIPT_YEAR__
+    __USER_NAME__ (c) __SCRIPT_YEAR__
+    __USER_EMAIL__
 
     TODO description
 """
@@ -13,9 +14,9 @@ if __name__=="__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("in_file", help="TODO")
-    parser.add_argument("--option", default=None, help="")
-    parser.add_argument("--ls_option", nargs="+", help="") 
     parser.add_argument("out_file", help="")
+    parser.add_argument("--option1", default=None, help="")
+    parser.add_argument("--option2", nargs="+", help="") 
 
     args = parser.parse_args()
 

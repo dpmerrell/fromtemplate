@@ -115,9 +115,13 @@ def generate_script():
     params = prep_params(script_path, config_path)
 
     # Load the template file as a string
-    with open(params["template_path"], "r") as f:
-        template_str = f.read()
-     
+    template_path = params["template_path"]
+    try:
+        with open(template_path, "r") as f:
+            template_str = f.read()
+    except FileNotFoundError:
+        raise FileNotFoundError("No template file defined for this file suffix! Try specifying one in your config YAML.")
+ 
     # Fill in the template
     template_str = fill_template(template_str, 
                                  params["fields"])

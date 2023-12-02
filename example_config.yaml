@@ -1,5 +1,5 @@
 # Add a YAML file like this to the hidden config directory:
-# $HOME/.script_templates/config.yaml
+# $HOME/.fromtemplate/config.yaml
 
 
 # Dictionary of template fields.
@@ -14,10 +14,10 @@ fields:
 # Key = file suffix; value = absolute path to template file.
 # The templates could be located anywhere, but the 
 # hidden config directory  
-# (i.e., /home/USERNAME/.script_templates/) 
+# (i.e., /home/USERNAME/.fromtemplate/) 
 # may be a convenient location to use.
 templates: 
-    #py: "/home/USERNAME/.script_templates/template.py"
-    #sh: "/home/USERNAME/.script_templates/template.sh"
+    #py: "/home/USERNAME/.fromtemplate/template.py"
+    #sh: "/home/USERNAME/.fromtemplate/template.sh"
 
 

@@ -1,15 +1,16 @@
 """
-    __SCRIPT_NAME__
-    __USER_NAME__ (c) __SCRIPT_YEAR__
+    __FILE_NAME__.py
+    __USER_NAME__ (c) __FILE_YEAR__
     __USER_EMAIL__
 
     TODO description
 """
 
+import argparse
 
-if __name__=="__main__":
 
-    import argparse
+
+def __FILE_NAME___script():
 
     parser = argparse.ArgumentParser()
     parser.add_argument("in_file", help="TODO")
@@ -18,4 +19,11 @@ if __name__=="__main__":
     parser.add_argument("--option2", nargs="+", help="") 
 
     args = parser.parse_args()
+
+
+
+if __name__=="__main__":
+
+    __FILE_NAME___script()
+
 

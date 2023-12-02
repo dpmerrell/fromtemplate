@@ -18,7 +18,7 @@ def fill_file_template(template_str, fields):
     performing string substitutions specified
     by `fields`.
 """
-def generate_file(newfile_path, template_path, fields, verbose=False, print_prefix=""):
+def generate_file(newfile_path, template_path, fields):
 
     # Load the template file as a string
     try:
@@ -34,9 +34,6 @@ def generate_file(newfile_path, template_path, fields, verbose=False, print_pref
     # Write the template to the new file 
     with open(newfile_path, "w") as f:
         f.write(template_str)
-
-    if verbose:
-        print(f"{print_prefix}{newfile_path}")
 
     # And we're done!
     return

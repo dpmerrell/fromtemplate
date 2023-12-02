@@ -49,11 +49,13 @@ def fromtemplate_script():
     parser.add_argument("--kind", default=None, help="`kind` of file or directory to generate.")
     parser.add_argument("--config-yaml", default=str(Path.home().joinpath(".fromtemplate","config.yaml")),
                                          help="Path to a YAML configuration file. By default, looks for one at $HOME/.fromtemplate/config.yaml.")
+    parser.add_argument("--silent", default=False, action="store_true", help="Disable stdout. Default False.")
+
     args = parser.parse_args()
     fromtemplate(args.new_file_path,
                  kind=args.kind,
                  config_yaml=args.config_yaml,
-                 verbose=True
+                 verbose=(not args.silent)
                 )
 
 

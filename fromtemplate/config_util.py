@@ -33,8 +33,9 @@ def get_params(name, kind, default_config, config):
 
     # Populate params from the defaults
     params = {"fields": default_config["fields"],
-              "template_path": default_config["templates"][kind]
+              "template_path": None
               }
+    params["template_path"] = default_config["templates"].get(kind)
     params["fields"]["__FILE_NAME__"] = name 
 
     # Update the template file path from the config, if applicable
@@ -46,7 +47,7 @@ def get_params(name, kind, default_config, config):
     # Update template fields from the config, if applicable
     if "fields" in config.keys():
         params["fields"].update(config["fields"])
-    
+
     return params
 
 

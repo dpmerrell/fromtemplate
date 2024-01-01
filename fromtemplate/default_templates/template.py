@@ -1,6 +1,6 @@
 """
     __FILE_NAME__
-    __USER_NAME__ (c) __FILE_YEAR__
+    (c) __USER_NAME__ __FILE_YEAR__
     __USER_EMAIL__
 
     TODO description

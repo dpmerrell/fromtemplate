@@ -8,7 +8,7 @@ from pathlib import Path
 """
     Recursively generate a directory (or a file) by populating a template.
 """
-def generate_dir(new_file_path, template_path, fields, verbose=False, print_prefix=""):
+def generate_dir(new_file_path, template_path, fields, verbose=False):
 
     tp = Path(template_path)
     nfp = Path(new_file_path)
@@ -17,14 +17,14 @@ def generate_dir(new_file_path, template_path, fields, verbose=False, print_pref
     if tp.is_file():
         generate_file(new_file_path, template_path, fields)
         if verbose:
-            print(f"{print_prefix}{nfp.name}")
+            print(str(nfp))
 
     # Recursive case: template path is a directory
     elif tp.is_dir():
         # Make a new directory at `nfp`
         nfp.mkdir(parents=True, exist_ok=True)
         if verbose:
-            print(f"{print_prefix}{nfp.name}/")
+            print(str(nfp))
 
         # Get children of the template path (directory)
         for child_path in tp.iterdir():
@@ -39,7 +39,7 @@ def generate_dir(new_file_path, template_path, fields, verbose=False, print_pref
             # For each child, call generate_dir. 
             template_child_str = str(child_path)
             generate_dir(new_child_str, template_child_str, fields,
-                         verbose=verbose, print_prefix=f"\t{print_prefix}")
+                         verbose=verbose)
     else:
         raise ValueError(f"{template_path} is not a file or directory.")
 

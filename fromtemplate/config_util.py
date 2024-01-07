@@ -16,11 +16,11 @@ import copy
     By default, template files are assumed to reside
     in the `default_templates` directory of this package.
 """
-def default_path(filename):
+def default_template_path(template_name):
 
     return pkg_resources.resource_filename("fromtemplate",
                                            str(Path("default_templates", 
-                                                     filename
+                                                     template_name
                                                     )
                                               )
                                           )
@@ -52,16 +52,16 @@ def get_params(name, kind, default_config, config):
 
 
 DEFAULT_CONFIG = {"fields": 
-                     {"__FILE_YEAR__": str(datetime.datetime.now().year),
-                      "__FILE_MONTH__": str(datetime.datetime.now().month),
-                      "__FILE_DAY__": str(datetime.datetime.now().day),
+                     {"__FILE_YEAR__": str(datetime.datetime.now().year).zfill(4),
+                      "__FILE_MONTH__": str(datetime.datetime.now().month).zfill(2),
+                      "__FILE_DAY__": str(datetime.datetime.now().day).zfill(2),
                       "__FILE_NAME__": "__NONAME__"
                      },
                   "templates": 
                       {
-                       "py": default_path("template.py"),
-                       "python_script": default_path("template.py"),
-                       "python_package": default_path("template_python_package"),
+                       "py": default_template_path("python_script"),
+                       "python_script": default_template_path("python_script"),
+                       "python_package": default_template_path("python_package"),
                       }
                  }
 

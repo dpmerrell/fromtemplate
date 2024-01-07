@@ -17,7 +17,7 @@ fields:
 # (i.e., /home/USERNAME/.fromtemplate/) 
 # may be a convenient location to use.
 templates: 
-    #py: "/home/USERNAME/.fromtemplate/template.py"
-    #sh: "/home/USERNAME/.fromtemplate/template.sh"
+    #py: "/home/USERNAME/.fromtemplate/python_script/__FILE_NAME__.py"
+    #sh: "/home/USERNAME/.fromtemplate/bash_script/__FILE_NAME__.sh"
 
 

@@ -23,7 +23,7 @@ def fromtemplate(new_file_name, kind=None, config_yaml=None, verbose=True):
         # The `suffix` is everything after the first period in the basename.
         kind = ".".join(file_basename.split(".")[1:])
         if kind == "":
-            raise ValueError(f"{new_file_path} does NOT have a file suffix. You MUST provide the `--kind` argument to fromtemplate!")
+            raise ValueError(f"{new_file_name} does NOT have a file suffix. You MUST provide the `--kind` argument to fromtemplate!")
     
     template_path, fields = prepare_params(file_basename, kind, config_yaml) 
 

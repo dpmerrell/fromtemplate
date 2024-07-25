@@ -36,7 +36,7 @@ def fromtemplate(new_file_name, kind=None, config_yaml=None, verbose=True):
                      verbose=verbose,
                     )
     else:
-        raise ValueError(f"Error generating {new_file_path}. No template exists for kind `{kind}`")
+        raise ValueError(f"Error generating {new_file_name}. No template exists for kind `{kind}`")
 
     return 
 

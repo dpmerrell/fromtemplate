@@ -42,7 +42,7 @@ def get_params(name, kind, default_config, config):
     if "templates" in config.keys():
         templates = config["templates"]
         if isinstance(templates, dict) and kind in templates.keys():
-            params["template_path"] = templates[kind]
+            params["template_path"] = str(Path(templates[kind]).expanduser())
 
     # Update template fields from the config, if applicable
     if "fields" in config.keys():

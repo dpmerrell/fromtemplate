@@ -49,7 +49,7 @@ def fromtemplate_script():
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("new_file_name", help="Name for the newly generate file (or directory).")
+    parser.add_argument("new_file_name", help="Name for the newly generated file (or directory).")
     parser.add_argument("--kind", default=None, help="`kind` of file (or directory) to generate.")
     parser.add_argument("--config-yaml", default=str(Path.home().joinpath(".fromtemplate","config.yaml")),
                                          help="Path to a YAML configuration file. By default, looks for one at $HOME/.fromtemplate/config.yaml.")

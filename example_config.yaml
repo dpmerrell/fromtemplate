@@ -5,8 +5,8 @@
 # Dictionary of template fields.
 # Key = template field string; value = substitution
 fields:
-    __USER_NAME__: "YOUR NAME"
-    __USER_EMAIL__: "your@email.com"
+    __USER_NAME__: "David Merrell"
+    __USER_EMAIL__: "davidpmerrell@gmail.com"
     # OTHER FIELDS...
 
 
